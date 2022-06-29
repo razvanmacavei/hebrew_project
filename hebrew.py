@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import random
 from keras.utils import np_utils
 
-# alex.sonea@gmail.com
 
 meta = {'image_size':(64,64), 'batch_size':32}
 
