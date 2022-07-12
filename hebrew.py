@@ -4,9 +4,32 @@ from tensorflow.keras import layers, datasets
 from keras.layers.convolutional import Conv2D, MaxPooling2D
 from keras.layers import Dropout, Dense, Flatten
 from keras.utils import np_utils
+<<<<<<< HEAD
 import tensorflow as tf
 import random
 import matplotlib.pyplot as plt
+=======
+
+
+meta = {'image_size':(64,64), 'batch_size':32}
+
+    
+(X_train, y_train), (X_test, y_test) = keras.utils.image_dataset_from_directory(
+    directory='D:\AAASubjects\Proiect internship - evreiesti\letters',
+    labels='inferred',
+    label_mode='categorical',
+    batch_size=meta['batch_size'],
+    image_size=meta['image_size'])
+
+X_train = X_train.astype('float')
+X_test = X_test.astype('float')
+
+X_train = X_train / 255.0
+X_test = X_test / 255.0
+
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+>>>>>>> f555c8dc386cc30d70b80567180778f552270e83
 
 
 meta = {'image_size':(32,32), 'batch_size':32}
